@@ -12,6 +12,8 @@ services:
       - ${DATA_DIR}/mosquitto/data:/mosquitto/data
       - ${DATA_DIR}/mosquitto/log:/mosquitto/log
     restart: always
+
+#    to play with mosquitto password into docker container
 #    FROM eclipse-mosquitto
 #    COPY entrypoint.sh /entrypoint.sh
 #    ENTRYPOINT ["sh", "/entrypoint.sh"]
