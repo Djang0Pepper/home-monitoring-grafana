@@ -1,4 +1,3 @@
 #!/bin/sh
-#export DATA_DIR=/mnt/nas
-export DATA_DIR=/mnt/usbflash
+export DATA_DIR=/tmp
 docker-compose up -d
