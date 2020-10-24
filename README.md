@@ -1,6 +1,6 @@
-# Home sensor data monitoring with MQTT, InfluxDB and Grafana
+# Home sensor data monitoring with MQTT, InfluxDB, Grafana with TASMOTA
 
-Blog post: [http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana](http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana)  
+Blog post: [http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana](http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana)
 
 
 ## Projects
@@ -16,7 +16,7 @@ Blog post: [http://nilhcem.com/iot/home-monitoring-with-mqtt-influxdb-grafana](h
 
 ### Mosquitto + InfluxDB + Grafana
 
-Make sure you have `docker` and `docker-compose` installed.  
+Make sure you have `docker` and `docker-compose` installed.
 For the example, a Raspberry Pi 3 B+ with Raspbian will be used.
 
 Set the `DATA_DIR` environment variable to the path where will be stored local data (e.g. in `/tmp`):
@@ -45,14 +45,14 @@ Mosquitto username and passwords are `mqttuser` and `mqttpassword`.
 
 ## Sensors
 
-Sensors should send data to the mosquitto broker to the following topic:  
-`home/{peripheralName}/{temperature|humidity|battery|status}`.  
+Sensors should send data to the mosquitto broker to the following topic:
+`home/{peripheralName}/{temperature|humidity|battery|status}`.
 For example: `home/bme280/temperature`.
 
-Arduino sketches for the ESP8266 are provided to communicate with a BME280 (`03-bme280_mqtt`) and a DHT22 (`05-dht22_mqtt`).  
+Arduino sketches for the ESP8266 are provided to communicate with a BME280 (`03-bme280_mqtt`) and a DHT22 (`05-dht22_mqtt`).
 Before flashing, you need to change the `WIFI_SSID`, `WIFI_PASSWORD`, and `MQTT_SERVER` constants to your WiFi information and MQTT server address.
 
-You can also use a Xiaomi MiJia Temperature & Humidity Sensor.  
+You can also use a Xiaomi MiJia Temperature & Humidity Sensor.
 For more information, see `04-mijia_ble_mqtt/README.md`.
 
 
